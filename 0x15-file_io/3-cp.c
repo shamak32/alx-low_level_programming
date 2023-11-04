@@ -1,13 +1,13 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
- * creates_buffer - Assign 1024 bytes for a buffer.
- * @file: The name of the file buffer for storing chars.
- * Return: A pointer to the newly-allocated buffer.
+ * error_file - check if files can be opened.
+ * @file_from: check file_from.
+ * @file_to: checks file_to.
+ * @argv:  argument vector.
+ * Return: no return.
  */
-
 void error_file(int file_from, int file_to, char *argv[])
 {
 	if (file_from == -1)
@@ -23,10 +23,11 @@ void error_file(int file_from, int file_to, char *argv[])
 }
 
 /**
- * close_file - Close file descriptors.
- * @fd: The file descriptor to close.
+ * main - check the code.
+ * @argc: number of arguments.
+ * @argv: arguments vector.
+ * Return: Always 0.
  */
-
 int main(int argc, char *argv[])
 {
 	int file_from, file_to, err_close;
